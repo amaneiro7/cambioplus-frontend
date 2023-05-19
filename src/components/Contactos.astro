@@ -3,9 +3,25 @@ import Title from "./Title.astro";
 
 ---
 
-<div>
-    <img src="" alt="">
+<div 
+    class="flex flex-col justify-center items-center"
+    aria-label="contact info"
+>
+    <figure class="w-36 aspect-square overflow-hidden opacity-95">
+        <img 
+            class="w-full h-full mix-blend-multiply object-cover object-center rounded-full"
+            src="assets/contactos.jpg" 
+            alt="Icono de Contacto"
+        >
+    </figure>
     <Title title="Contactos" />
-    <p>Whasapp</p>
-    <p>+573212356823</p>
+    <div class="flex flex-col gap-2 my-4 text-[#05355F] uppercase text-center">
+        <p class="underline underline-offset-4">Whatsapp</p>
+        <a 
+            class="text-lg"
+            href="https://api.whatsapp.com/message/MDB63KJSIPBKO1?autoload=1&app_absent=0"
+        >
+            +57 3212356823
+        </a>        
+    </div>
 </div>

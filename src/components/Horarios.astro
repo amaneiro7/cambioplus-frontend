@@ -5,15 +5,22 @@ const workdays = [
     {days: "Sábados", schedule: "9:00 AM - 4:00 PM"}
 ]
 ---
-<div>
-    <figure>
-        <img src="" alt="">
+<div 
+    class="flex flex-col justify-center items-center"
+    aria-label="contact info"
+>
+    <figure class="w-36 aspect-square overflow-hidden opacity-95">
+        <img
+            class="w-full h-full mix-blend-multiply" 
+            src="assets/Horarios.jpg" 
+            alt="Icono de Horario"
+        >
     </figure>
     <Title title="Horarios" />
     {workdays.map(({days,schedule}) => (
-        <div>
-            <p>{days}</p>
-            <p>{schedule}</p>
+        <div class="flex flex-col gap-1 my-4 text-[#05355F] uppercase text-center">
+            <p class="underline underline-offset-4">{days}</p>
+            <p class="font-extrabold text-lg">{schedule}</p>
         </div>
     ))}
 </div>
