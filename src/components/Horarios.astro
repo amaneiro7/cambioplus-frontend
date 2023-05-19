@@ -1,0 +1,19 @@
+---
+import Title from './Title.astro'
+const workdays = [
+    {days: "Lunes a Viernes", schedule: "9:00 AM - 5:00 PM"},
+    {days: "Sábados", schedule: "9:00 AM - 4:00 PM"}
+]
+---
+<div>
+    <figure>
+        <img src="" alt="">
+    </figure>
+    <Title title="Horarios" />
+    {workdays.map(({days,schedule}) => (
+        <div>
+            <p>{days}</p>
+            <p>{schedule}</p>
+        </div>
+    ))}
+</div>

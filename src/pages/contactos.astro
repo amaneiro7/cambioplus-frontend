@@ -1,9 +1,13 @@
 ---
+import Horarios from '../components/Horarios.astro';
+import Contactos from '../components/Contactos.astro';
 import Layout from '../layouts/Layout.astro';
+
 ---
 
 <Layout title="Cambio Plus">
-	<main class="w-full">
-		
-	</main>
+	<section class="flex flex-col gap-4 justify-center items-center mt-3">		
+		<Horarios />
+		<Contactos />
+	</section>
 </Layout>
