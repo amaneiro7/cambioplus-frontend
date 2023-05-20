@@ -2,7 +2,8 @@
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		colors: {			
+		colors: {		
+			'transparent': 'transparent',
 			'primary-100': '#0AB485',
 			'primary-200': '#00966a',
 			'primary-300': '#00552f',
@@ -16,6 +17,7 @@ module.exports = {
 		},		
 		backgroundImage:{
 			'heroBackground': "linear-gradient(190deg,rgba(255, 255, 255, 0.3), rgba(5, 53, 95, .5)), url('/assets/herophoto.jpg')",			
+			'aboutUsBackground': "linear-gradient(190deg,rgba(255, 255, 255, 0.3), rgba(5, 53, 95, .5)), url('/assets/hands-together.jpg')",			
 		},
 		fontFamily: {
 
