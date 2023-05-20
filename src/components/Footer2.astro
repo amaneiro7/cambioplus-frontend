@@ -1,0 +1,91 @@
+---
+import Logo from "./Logo.svelte";
+let navlink = [  
+  {link: "Contáctanos", to: "/contactanos"},
+  {link: "Nosotros", to: "/nosotros"},
+  {link: "Servicios", to: "/servicios"},
+  {link: "Preguntas más frecuentes", to: "/faqs"},
+]
+let socialsMedia = [
+  {name: "Whatsapp", to:"https://api.whatsapp.com/message/MDB63KJSIPBKO1?autoload=1&app_absent=0", svg: '/assets/whatsapp-logo.svg'},
+  {name: "Instragram", to:"https://www.instagram.com/cambioplus/", svg: '/assets/instagram-logo.svg'}
+]
+let actualYear = new Date().getFullYear();
+---
+
+<footer 
+  aria-label="Site Footer" 
+  class="box bg-gray-300 text-xs md:pt-20"
+>
+<div class="flex flex-col gap-2 justify-start px-4 py-10 md:grid md:grid-cols-3 md:justify-between md:gap-6 md:items-start">
+      <!-- Logo -->
+      <div class="flex flex-col gap-3">
+        <div class="flex justify-start items-center gap-2 text-green-800 ">
+            <Logo />
+            <h2 class="text-lg font-extrabold">Cambio Plus</h2>
+        </div>
+        <div class="flex gap-6">
+            {
+              socialsMedia.map(social => (            
+                <a 
+                  href={social.to}
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-green-600 transition hover:text-green-600/75"
+                >
+                  <span class="sr-only">{social.name}</span>
+                  <img 
+                    class="h-6 w-6 object-contain text-green-600 transition hover:text-green-600/75"
+                    src={social.svg} alt={social.name}
+                  >
+                </a>            
+              ))
+            }        
+        </div>
+      </div>
+
+      <!-- Acerca de Nosotros -->
+      <div class="flex flex-col max-w-md text-left leading-relaxed font-extrabold mt-5 gap-6 ">
+        <h2 class="text-lg text-green-800">Acerca de Nosotros</h2>
+        <p class="text-green-600">
+          Haciendo tus cambios, giros y remesas Internacionales de forma sencilla, rápida y confiable.
+        </p>
+      </div>
+
+      <!-- Navegacion -->
+      <div class="flex flex-col justify-start items-start gap-6 mt-5">
+      <h2 class="text-lg text-green-800 font-extrabold">Links Utiles</h2>
+      <nav aria-label="Footer Nav">
+        <ul class="flex flex-col flex-wrap ml-4 justify-start gap-6 md:gap-3">
+          {
+            navlink.map(nav => (
+              <li>
+                <a class="font-extrabold text-green-600 transition hover:text-green-600/75" href={nav.to}>
+                  {nav.link}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+      </div>
+     
+    </div>    
+    <div class="w-full h-auto p-4 flex flex-wrap justify-center items-center gap-3 bg-slate-900/90 text-white">
+      <p class="sm:px-6 lg:px-8">Copyright © {actualYear} Cambio Plus</p>
+      <p class="sm:px-6 lg:px-8">Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <style>
+    @media (min-width: 768px) {
+        .box {
+            --mask:
+            radial-gradient(176.65px at 50% 237.00px,#000 99%,#0000 101%) calc(50% - 158px) 0/316px 100%,
+            radial-gradient(176.65px at 50% -158px,#0000 99%,#000 101%) 50% 79px/316px 100% repeat-x;
+            -webkit-mask: var(--mask);
+            mask: var(--mask);
+            
+        }
+    }
+  </style>
