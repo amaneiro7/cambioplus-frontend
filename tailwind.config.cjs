@@ -16,8 +16,9 @@ module.exports = {
 			'secondary-300': '#3e5e8d',
 		},		
 		backgroundImage:{
-			'heroBackground': "linear-gradient(190deg,rgba(255, 255, 255, 0.3), rgba(5, 53, 95, .5)), url('/assets/herophoto.jpg')",			
-			'aboutUsBackground': "linear-gradient(190deg,rgba(255, 255, 255, 0.3), rgba(5, 53, 95, .5)), url('/assets/hands-together.jpg')",			
+			'heroBackground': "linear-gradient(190deg,rgba(255, 255, 255, 0.3), rgba(5, 53, 95, .5)), url('/assets/herophoto.jpg')",
+			'aboutUsBackground': "linear-gradient(190deg,rgba(255, 255, 255, 0.5), rgba(253, 253, 253, .5)), url('/assets/hands-together.jpg')",
+			'servicesUsBackground': "linear-gradient(190deg,rgba(255, 255, 255, 0.3), rgba(5, 53, 95, .5)), url('/assets/services.jpg')",
 		},
 		fontFamily: {
 
