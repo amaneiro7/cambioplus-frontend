@@ -20,7 +20,7 @@ let actualYear = new Date().getFullYear();
 <div class="flex flex-col gap-2 justify-start px-4 py-10 md:grid md:grid-cols-3 md:justify-between md:gap-6 md:items-start">
       <!-- Logo -->
       <div class="flex flex-col gap-3">
-        <div class="flex justify-start items-center gap-2 text-green-800 ">
+        <div class="flex justify-start items-center gap-2 text-primary-300 ">
             <Logo />
             <h2 class="text-lg font-extrabold">Cambio Plus</h2>
         </div>
@@ -31,11 +31,11 @@ let actualYear = new Date().getFullYear();
                   href={social.to}
                   rel="noreferrer"
                   target="_blank"
-                  class="text-green-600 transition hover:text-green-600/75"
+                  class="text-primary-100 transition hover:text-primary-100/75"
                 >
                   <span class="sr-only">{social.name}</span>
                   <img 
-                    class="h-6 w-6 object-contain text-green-600 transition hover:text-green-600/75"
+                    class="h-6 w-6 object-contain text-primary-100 transition hover:text-primary-100/75"
                     src={social.svg} alt={social.name}
                   >
                 </a>            
@@ -46,21 +46,21 @@ let actualYear = new Date().getFullYear();
 
       <!-- Acerca de Nosotros -->
       <div class="flex flex-col max-w-md text-left leading-relaxed font-extrabold mt-5 gap-6 ">
-        <h2 class="text-lg text-green-800">Acerca de Nosotros</h2>
-        <p class="text-green-600">
+        <h2 class="text-lg text-primary-300">Acerca de Nosotros</h2>
+        <p class="text-primary-100">
           Haciendo tus cambios, giros y remesas Internacionales de forma sencilla, rápida y confiable.
         </p>
       </div>
 
       <!-- Navegacion -->
       <div class="flex flex-col justify-start items-start gap-6 mt-5">
-      <h2 class="text-lg text-green-800 font-extrabold">Links Utiles</h2>
+      <h2 class="text-lg text-primary-300 font-extrabold">Links Utiles</h2>
       <nav aria-label="Footer Nav">
         <ul class="flex flex-col flex-wrap ml-4 justify-start gap-6 md:gap-3">
           {
             navlink.map(nav => (
               <li>
-                <a class="font-extrabold text-green-600 transition hover:text-green-600/75" href={nav.to}>
+                <a class="font-extrabold text-primary-100 transition hover:text-primary-100/75" href={nav.to}>
                   {nav.link}
                 </a>
               </li>
