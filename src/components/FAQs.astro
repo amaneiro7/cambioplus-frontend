@@ -8,14 +8,15 @@ const faqsList = [
   {question: "Lorem ipsum dolor sit amet consectetur adipisicing?", answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in, recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo consequuntur distinctio corporis earum similique!"},
   ]
 ---
-<section class="px-6 space-y-4">
-    <h2 class="mt-12 text-green-800 font-extrabold text-xl">Preguntas Frecuentes</h2>
+<section class="bg-secondary-100 px-6 py-10">
+  <div class="bg-secondary-200 px-6 py-2 space-y-4 rounded-lg">
+    <h2 class="mt-12 text-white font-extrabold text-xl">Preguntas Frecuentes</h2>
     {faqsList.map(faq => (
     <details class="group [&_summary::-webkit-details-marker]:hidden" open>
       <summary
-        class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 text-gray-700 font-extrabold"
+        class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-secondary-100 p-1 text-white font-extrabold"
       >
-        <h2 class="font-bold text-green-800">
+        <h2 class="font-bold text-white">
           {faq.question}
         </h2>
   
@@ -35,9 +36,11 @@ const faqsList = [
         </svg>
       </summary>
   
-      <p class="mt-4 px-4 leading-relaxed text-green-600">
+      <p class="mt-4 px-4 leading-relaxed text-terciary-200">
         {faq.answer}
       </p>
     </details>
     ))}
+
+  </div>
   </section>

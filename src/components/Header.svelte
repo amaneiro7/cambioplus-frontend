@@ -12,7 +12,7 @@
 </script>
 
 <header class="shadow fixed w-full h-14 z-10">
-  <nav class="flex flex-col relative justify-between items-start pl-6 py-3 bg-secondary-100 md:pr-6 md:flex-row md:items-center overflow-hidden">
+  <nav class="flex flex-col relative justify-between items-start pl-6 py-3 bg-secondary-200 shadow-lg md:pr-6 md:flex-row md:items-center overflow-hidden">
     <Logo />
     <button 
       class="absolute top-6 right-4 flex flex-col justify-between w-8 h-5 md:hidden" 
